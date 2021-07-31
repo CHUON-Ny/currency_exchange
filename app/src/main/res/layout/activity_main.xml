@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/riels_to_usd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/khmer_riels_to_usd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        android:onClick="navigateToExchangeRielsToUsd"/>
+
+    <Button
+        android:id="@+id/usd_to_riels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/usd_to_khmer_riels"
+        app:layout_constraintBottom_toTopOf="@+id/riels_to_usd"
+        app:layout_constraintEnd_toEndOf="@+id/riels_to_usd"
+        app:layout_constraintStart_toStartOf="@+id/riels_to_usd"
+        android:onClick="navigateToExchangeUsdToRiels"/>
+
+    <Button
+        android:id="@+id/riels_to_euro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/khmer_riels_to_euro"
+        app:layout_constraintEnd_toEndOf="@+id/riels_to_usd"
+        app:layout_constraintStart_toStartOf="@+id/riels_to_usd"
+        app:layout_constraintTop_toBottomOf="@+id/riels_to_usd"
+        android:onClick="navigateToExchangeRielsToEuro"/>
+
+    <Button
+        android:id="@+id/euro_to_riels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/euro_to_khmer_riels"
+        app:layout_constraintEnd_toEndOf="@+id/riels_to_usd"
+        app:layout_constraintStart_toStartOf="@+id/riels_to_usd"
+        app:layout_constraintTop_toBottomOf="@+id/riels_to_euro"
+        android:onClick="navigateToExchangeEuroToRiels"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
